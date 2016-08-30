@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="ru" ng-app="newsFeed">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>Лента новостей для EP на angularJS</title>
+
+    <!-- Custom styles -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="news_tape_box" id="newsTapeBox" ng-controller="newsFeedController">
+      <div class="header">filter: <input type="text" name="filter" id="filter"></div>
+      <div ng-controller='modalController'>
+        <ul class="news_list">
+          <li ng-repeat="newsItem in news | objectProplimitTo:4 " ng-click='toggleModal()' id="newsItem_{{ $index }}">
+            <div class="poster">
+              <img src="images/{{ newsItem.poster }}" alt="" width="{{ posterWidth }}" height="{{ posterHeight }}" >
+            </div>
+            <div class="title">{{ newsItem.title }}</div>
+            <div class="description">{{ newsItem.description }}</div>
+          </li>
+        </ul>     
+      </div>
+    </div>
+
+    <script src="js/libs/angular.min.js"></script>   
+
+   <!--  <script src="js/project/config.js"></script>    --> 
+    <script src="js/project/modules.js"></script>    
+    <script src="js/project/filters/filters.js"></script>    
+    <script src="js/project/services/initDataService.js"></script>    
+    <script src="js/project/controllers/newsFeedController.js"></script>    
+    <script src="js/project/controllers/modalController.js"></script>    
+    <script src="js/project/directives/modalDirective.js"></script>    
+  </body>
+</html>

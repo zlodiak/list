@@ -1,0 +1,1 @@
+var newsFeed = angular.module('newsFeed', []);
