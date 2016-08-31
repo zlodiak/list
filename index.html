@@ -15,10 +15,11 @@
 
   <body>
     <div class="news_tape_box" id="newsTapeBox" ng-controller="newsFeedController">
-      <div class="header">filter: <input type="text" name="filter" id="filter"></div>
+      <div class="header">filter: <input type="text" name="filter" id="filter" ng-model="searchText.description"></div>
       <div ng-controller='modalController'>
+        {{ searchText }}
         <ul class="news_list">
-          <li ng-repeat="newsItem in news | objectProplimitTo:4 " ng-click='toggleModal()' id="newsItem_{{ $index }}">
+          <li ng-repeat="newsItem in news | limitTo:7 | filter:searchText" ng-click='toggleModal()' id="newsItem_{{ $index }}">
             <div class="poster">
               <img src="images/{{ newsItem.poster }}" alt="" width="{{ posterWidth }}" height="{{ posterHeight }}" >
             </div>
@@ -32,8 +33,7 @@
     <script src="js/libs/angular.min.js"></script>   
 
    <!--  <script src="js/project/config.js"></script>    --> 
-    <script src="js/project/modules.js"></script>    
-    <script src="js/project/filters/filters.js"></script>    
+    <script src="js/project/modules.js"></script>      
     <script src="js/project/services/initDataService.js"></script>    
     <script src="js/project/controllers/newsFeedController.js"></script>    
     <script src="js/project/controllers/modalController.js"></script>    
