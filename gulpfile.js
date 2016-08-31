@@ -14,16 +14,13 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {  
     gulp.src([
-            'js/project/modules.js',
-            'js/project/services/initDataService.js',
-            'js/project/controllers/newsFeedController.js',
-            'js/project/controllers/modalController.js',
-            'js/project/directives/modalDirective.js'
-        ])
-        .pipe(browserify())
-        .pipe(concat('scripts.js'))
+            'js/project/*.js',
+            'js/project/**/*.js'
+        ])   
+        .pipe(concat('scripts.js'))  
         .pipe(gulp.dest('build'))
 });
+
 
 
 
