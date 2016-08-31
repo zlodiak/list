@@ -2,7 +2,7 @@ newsFeed.factory('initDataService', function(){
     return{
         initData:{
             "values":[
-                {"title":"Lo23rem ips sit.", "poster": "1.jpg", "description": "Lorem 45 ipsum dolor sit amet, consectetur a!"},
+                {"title":"Lo23reddm ips sit.", "poster": "1.jpg", "description": "Lorem 45 ipsum dolor sit amet, consectetur a!"},
                 {"title":"Lorem ipsum dolor sit.", "poster": "2.jpg", "description": "Lorem ipsum dolor sit amet, consectetur a!"},
                 {"title":"Lo ipsum dolor sit.", "poster": "3.jpg", "description": "Lorem ipsum dolor sit amet, consectetur a!"},
                 {"title":"Lorem  dolor sit.", "poster": "4.jpg", "description": "Lorem ipsum dolor sit amet, consectetur a!"},

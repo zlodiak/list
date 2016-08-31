@@ -1,1 +1,1 @@
-var newsFeed = angular.module('newsFeed', []);
+var newsFeed = angular.module('newsFeed', []);;
